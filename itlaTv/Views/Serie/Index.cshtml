@@ -34,9 +34,10 @@
                                     <a asp-controller="Serie" asp-action="Edit" asp-route-id="@item.Id" class="btn btn-sm btn-outline-info">Editar</a>
                                     <a asp-controller="Serie" asp-action="Delete" asp-route-id="@item.Id" class="btn btn-sm btn-outline-danger">Borrar</a>
                                 </div>
-
+                                
                                 <small class="text-body-secondary">@item.ProducerId</small>
-                                <small class="text-body-secondary">@item.GenderId</small>
+                                <small class="text-body-secondary">Genero Primario: @item.PrimaryGenderId</small>
+                                <small class="text-body-secondary">Genero Secundario: @item.SecondaryGenderId</small>
                             </div>
                         </div>
                     </div>

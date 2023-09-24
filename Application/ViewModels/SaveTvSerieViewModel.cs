@@ -18,7 +18,8 @@ namespace Application.ViewModels
         [Required(ErrorMessage = "Debe colocar la productora de la Serie")]
         public int ProducerId { get; set; }
 
-        [Required(ErrorMessage = "Debe colocar el genero de la Serie")]
-        public int GenderId { get; set; }
+        [Required(ErrorMessage = "Debe colocar el genero primario de la Serie")]
+        public int PrimaryGenderId { get; set; }
+        public int SecondaryGenderId { get; set; }
     }
 }

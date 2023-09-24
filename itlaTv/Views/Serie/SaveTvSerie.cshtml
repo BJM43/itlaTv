@@ -37,12 +37,18 @@
                     </select>
                     <span asp-validation-for="ProducerId" class="text-danger"></span>
 
-                    <label asp-for="GenderId" class="form-label">Genero: </label>
-                    <select asp-for="GenderId" class="form-select">
+                    <label asp-for="PrimaryGenderId" class="form-label">Genero Primario: </label>
+                    <select asp-for="PrimaryGenderId" class="form-select">
                         <option value="1">Anime</option>
 
                     </select>
-                    <span asp-validation-for="GenderId" class="text-danger"></span>
+                    <span asp-validation-for="PrimaryGenderId" class="text-danger"></span>
+
+                    <label asp-for="SecondaryGenderId" class="form-label">Genero Secundario: </label>
+                    <select asp-for="SecondaryGenderId" class="form-select">
+                        <option value="3">General</option>
+
+                    </select>
 
                     <input type="hidden" asp-for="Id" />
 

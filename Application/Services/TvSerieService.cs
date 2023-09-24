@@ -21,7 +21,8 @@ namespace Application.Services
             serie.Link = vm.Link;
             serie.ImgLink = vm.ImgLink;
             serie.ProducerId = vm.ProducerId;
-            serie.GenderId = vm.GenderId;
+            serie.PrimaryGenderId = vm.PrimaryGenderId;
+            serie.SecondaryGenderId = vm.SecondaryGenderId;
 
             await _tvSerieRepository.AddAsync(serie);
         }
@@ -34,7 +35,8 @@ namespace Application.Services
             serie.Link = vm.Link;
             serie.ImgLink = vm.ImgLink;
             serie.ProducerId = vm.ProducerId;
-            serie.GenderId = vm.GenderId;
+            serie.PrimaryGenderId = vm.PrimaryGenderId;
+            serie.SecondaryGenderId = vm.SecondaryGenderId;
 
             await _tvSerieRepository.UpdateAsync(serie);
         }
@@ -56,7 +58,8 @@ namespace Application.Services
                 vm.Link = tvserie.Link;
                 vm.ImgLink = tvserie.ImgLink;
                 vm.ProducerId = tvserie.ProducerId;
-                vm.GenderId = tvserie.GenderId;
+                vm.PrimaryGenderId = tvserie.PrimaryGenderId;
+                vm.SecondaryGenderId = tvserie.SecondaryGenderId;
             }
 
             return vm;
@@ -72,7 +75,8 @@ namespace Application.Services
                 Link = tvserie.Link,
                 ImgLink = tvserie.ImgLink,
                 ProducerId = tvserie.ProducerId,
-                GenderId = tvserie.GenderId
+                PrimaryGenderId = tvserie.PrimaryGenderId,
+                SecondaryGenderId = tvserie.SecondaryGenderId
             }).ToList();
         }
     }

@@ -7,6 +7,7 @@
         public string Link { get; set; }
         public string ImgLink { get; set; }
         public int ProducerId { get; set; }
-        public int GenderId { get; set; }
+        public int PrimaryGenderId { get; set; }
+        public int SecondaryGenderId { get; set; }
     }
 }

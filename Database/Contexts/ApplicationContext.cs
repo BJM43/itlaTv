@@ -36,7 +36,13 @@ namespace Database.Contexts
             modelBuilder.Entity<Gender>()
                 .HasMany<TvSerie>(gender => gender.TvSeries)
                 .WithOne(tvSerie => tvSerie.Gender)
-                .HasForeignKey(tvSerie => tvSerie.GenderId)
+                .HasForeignKey(tvSerie => tvSerie.PrimaryGenderId)
+                .OnDelete(DeleteBehavior.Cascade);
+
+            modelBuilder.Entity<Gender>()
+                .HasMany<TvSerie>(gender => gender.TvSeries)
+                .WithOne(tvSerie => tvSerie.Gender)
+                .HasForeignKey(tvSerie => tvSerie.SecondaryGenderId)
                 .OnDelete(DeleteBehavior.Cascade);
             #endregion
 

@@ -1,4 +1,5 @@
 ﻿using Application.Services;
+using Application.ViewModels;
 using Database.Contexts;
 using itlaTv.Models;
 using Microsoft.AspNetCore.Mvc;
@@ -14,7 +15,6 @@ namespace itlaTv.Controllers
         {
             _tvSerieService = new(dbContext);
         }
-
         public async Task<IActionResult> Index()
         {
             return View(await _tvSerieService.GetAllViewModel());
