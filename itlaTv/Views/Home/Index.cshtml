@@ -1,0 +1,36 @@
+﻿@model List<Application.ViewModels.TvSerieViewModel>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="container-fluid">
+
+    <div class="row">
+
+        @if(Model == null || Model.Count == 0)
+        {
+            <h2>No hay Series</h2>
+        } 
+        else
+        {
+            @foreach (Application.ViewModels.TvSerieViewModel item in Model)
+            {
+                <div class="col-4">
+                    <div class="card shadow-sm">
+                        <img class="bd-placeholder card-img card-img-top img-series-size" src="@item.ImgLink">
+                        <div class="card-body">
+                            <h4>@item.Name</h4>
+                            <p class="card-text"><a href="@item.Link" target="_blank">Ver</a></p>
+                            <div class="">
+
+                                <small class="text-body-secondary">@item.ProducerId</small>
+                                <small class="text-body-secondary">@item.GenderId</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        }       
+        
+    </div>
+</div>
